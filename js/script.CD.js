@@ -8,12 +8,12 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     if (localStorage.getItem(Email)) {
       document.getElementById("span").innerText = "E-mail já cadastrado.";
       return;
-      //aviso de email já cadastrado 
+      
     }
     if (Senha !== confirmeSenha) {
       document.getElementById("senhaid").innerText = "As senhas não coincidem.";
       return;
-      // aviso de senha 
+     
     }
   
     const user = {
