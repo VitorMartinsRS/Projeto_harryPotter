@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Henny+Penny&family=Poiret+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(rgba(99, 22, 6, 0.212), rgba(100, 53, 39, 0.5)), url('/img/background/estacaonovemeio.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Bigelow Rules', serif;
+}
+
+/* Formulário de registro */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+form {
+  width: 550px;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Henny Penny';
+  font-size: 30px;
+  color: #fff;
+}
+
+.botao {
+  width: 100%;
+  height: 35px;
+  background-color: #b1a526;
+  color: #fff;
+  font-family: 'Henny Penny';
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.conta {
+  color: #b1a526;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+  font-family: 'Poiret One';
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.conta:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px){
+  form {
+    max-width: 350px;
+    max-height: 500px;
+  }
+}

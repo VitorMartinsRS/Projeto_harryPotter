@@ -1,0 +1,339 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Henny+Penny&family=Poiret+One&display=swap');
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background: url('/img/background/planodefundo.jpg');
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 130vh;
+
+}
+
+/* Estilo da div que centraliza a imagem */
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  height: 100vh; /* ocupa a tela toda */
+  
+}
+.img_com_texto{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* Estilo da imagem */
+#img_chapeu {
+  
+  width: 360px;
+  height: 360px;
+ display: grid;
+ margin-top:0px;
+ z-index: 10;
+
+}
+
+.h2{
+  color:white;
+  font-size:24px;
+  font-family: 'Poiret One',cursive;
+  margin: 10px;
+  text-shadow: 2px 2px 4px black;
+  padding: 0px;
+  align-items: center;
+
+}
+
+.botao_quiz {
+  position: absolute;
+  bottom: 150px; /* distância do rodapé da imagem */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #d8b62c;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight:bold;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  transition: background-color 0.4s;
+}
+
+.botao_quiz:hover {
+  background-color: #ccb762;
+}
+
+.container{
+  background-color: transparent;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+
+}
+
+.questions-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  
+}
+
+.question{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color:  rgb(122, 24, 4);
+}
+
+.resp-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.resp-button{
+  background-color: #ccb762;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 10px;
+  height: 48px;
+  padding: 0 32px ;
+
+  transition: filter 0.2s;
+}
+
+.resp-button:hover{
+  filter: brightness(0.8);
+}
+
+.resp-button.selecionado {
+  background-color: #ffc107; /* Dourado claro */
+  color: #000;
+  font-weight: bold;
+  border: 2px solid #000;
+}
+
+.hide{
+  display: none;
+}
+
+.questions-container {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resp-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;  /* Alinha os botões horizontalmente */
+  gap: 10px;                /* Espaço entre os botões */
+  margin-top: 20px;
+}
+
+#ant-question{
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  width:40%;
+  background-color: #550c0c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
+#prox-question {
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  width: 40%;
+  background-color: #065822;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center; 
+}
+
+
+
+/* Esconde o resultado até o final */
+#resultado-final.hide {
+  display: none;
+}
+
+/* Mostra o resultado com animação */
+#resultado-final.show {
+  animation: fadeIn 1s ease-in-out;
+  display: block;
+}
+
+/* Animação para o efeito de fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilos gerais para o resultado */
+#resultado-final {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilos para a imagem da casa */
+#imagem-casa {
+  width: 80%; /* A imagem ocupa 80% da largura disponível */
+  max-width: 300px; /* Limita o tamanho da imagem */
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 20px;
+  transition: transform 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+/* Efeito de hover nas imagens */
+#imagem-casa:hover {
+  transform: scale(1.05); /* Aumenta um pouco a imagem no hover */
+}
+
+/* Estilos do nome da casa */
+#casa-result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ddda0a;
+  text-transform: capitalize;
+}
+
+/* Estilos adicionais para as casas */
+.grifinoria #imagem-casa {
+  border: 6px solid #ae0001; /* Borda vermelha para a Grifinória */
+}
+
+.sonserina #imagem-casa {
+  border: px solid #1a472a; /* Borda verde para a Sonserina */
+}
+
+.corvinal #imagem-casa {
+  border: 6px solid #0e1a40; /* Borda azul para a Corvinal */
+}
+
+.lufaLufa #imagem-casa {
+  border: 6px solid #ecb939; /* Borda amarela para a Lufa-Lufa */
+}
+
+.frase-casa{
+  color: #000;
+  font-size: 20px;
+  font-family: 'Henny Penny', cursive;
+
+}
+
+.feitiço {
+  position: absolute; /* tira do fluxo, não empurra nada */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 600px;
+  pointer-events: none;
+  z-index: 0; /* atrás da imagem central */
+}
+
+.feitiço-img {
+  position: absolute;
+  opacity: 0.09; /* transparência suave */
+  max-width: 130px;
+  pointer-events: none;
+  z-index: 0;
+   border-radius: 10px;
+  box-shadow: 2px 2px 8px 8px rgba(216, 205, 205, 0.822);
+}
+
+/* Posições laterais */
+.feitiço1 {
+  left: -100px;
+  top: 200px;
+}
+
+.feitiço2 {
+  right: -120px;
+  top: 200px;
+}
+
+.feitiço3 {
+  left: -155px;
+  top: 500px;
+}
+
+.feitiço4 {
+  right: -170px;
+  top: 500px;
+}
+
+/* Garante que imagem central e botão estejam na frente */
+.centro {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .feitiço-img {
+    max-width: 60px;
+  }
+  .feitiço1 { left: 5px; top: 70px; }
+  .feitiço2 { right: 5px; top: 120px; }
+  .feitiço3 { left: 5px; top: 200px; }
+  .feitiço4 { right: 5px; top: 250px; }
+}
+
+
+

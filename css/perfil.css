@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Henny+Penny&family=Poiret+One&family=Work+Sans&display=swap');
+
+* {
+  font-family: 'Henny Penny', cursive, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h2 {
+  color: #fff;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    to bottom right,
+    #001307 1%,
+    #014d1e 10%,
+    #09b209 40%,
+    #0e9f1f 50%,
+    #0a9f1e 60%,
+    #0dc222 70%,
+    #07a817 80%,
+    #08a618 90%,
+    #166206 100%
+  );
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #00ff006e;
+  margin-bottom: 20px;
+}
+
+.cabeçalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #f7f7f7;
+  padding: 5px 5px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.menu a:hover {
+  background-color: #0d4e0593;
+  color: #f7f7f7;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+.main-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  width: 100%;
+  justify-content: center;
+  gap: 40px;
+}
+
+.foto-preview {
+  margin: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f5f5f5;
+  background: linear-gradient(
+    to bottom,
+    #00ff1e 1%,
+    #01de14 5%,
+    #00ef14 10%,
+    #06ee1af6 20%,
+    #09e61ce5 30%,
+    #05ae1362 40%,
+    #00270413 50%,
+    #05ae1370 60%,
+    #00df13bc 70%,
+    #01ff16be 80%,
+    #00ff15 90%,
+    #2fff00 100%
+  );
+  margin: 0 ;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.foto-preview:hover {
+  opacity: 1;
+}
+
+#fotoInput {
+  display: none;
+}
+
+.infor-user {
+  width: 500px;
+  min-width: 300px;
+  height: 500px;
+  
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+  background: -webkit-linear-gradient(#006709, #000000);
+  background: linear-gradient(#3b573d, #3ae04e);  
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(173, 7, 7, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.infor-user h2 {
+  margin-top: 20px;
+  font-family: 'Poiret One', cursive, sans-serif;
+  font-size: 40px;
+  color: #fbfcfb;
+}
+
+#nome {
+  font-size: 32px;
+  color: #fff;
+}
+
+#idade {
+  font-size: 20px;
+  color: #fff;
+}
+
+.bio {
+  display: block;
+  border-radius: 10px;
+  width: 80%;
+  color: #fff;
+  background-color: #002704b4;
+  box-shadow: 0 2px 6px rgba(173, 7, 7, 0.1);
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.form-container {
+  text-align: center;
+  background-color: #03f70317;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #1eff00;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.form-container h4 {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Poiret One', cursive, sans-serif;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  height: 35px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.form-container button {
+  background-color: #1fdf06;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-container button:hover,
+button:hover {
+  background-color: #1b860d93;
+  color: #f7f7f7;
+}
+
+.foto-upload {
+  display: flex;
+  justify-content: center;
+}
+
+#username {
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: 'Poiret One', cursive, sans-serif;
+  font-size: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ecedef;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 5px 0;
+}
+
+.card p {
+  color: #444;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #000;
+  font-family: 'Bigelow Rules', cursive, sans-serif;
+  font-size: 25px;
+}
+
+footer {
+  background-color: #1b860d93;
+  color: #f7f7f7;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .main-perfil {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .infor-user {
+    width: 350px;
+    height: 550px;
+    margin-right: 0;
+  }
+  .foto-preview {
+    margin: 0 auto 20px auto;
+  }
+}
