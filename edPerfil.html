@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+  <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+  <header>
+  <div class="cabeçalho"> 
+    <a href="">
+      <div class="logo"><img src="img/LOGO.png.png" alt="logo" style="width: 130px;"></div>
+    </a>
+    <div class="menu">
+      <a href="">Início</a>
+      <a href="">Filmes</a>
+      <a href="">Meus Favoritos</a>
+      <a href="">Quiz</a>
+    </div>
+  </div>  
+  </header>
+  <main>
+    
+    <h2>Editar Perfil</h2>
+    <div class="foto-upload">
+      <label for="fotoInput">
+        <img id="fotoPreview" class="foto-preview"  alt="Foto de perfil" img src="img/perfil-de-usuario.png" onclick="document.getElementById('fotoInput').click();">
+      </label>
+      <input type="file" id="fotoInput" accept="image/*">
+    </div>
+    <p id="username">USUARIO</p>
+    <div class="form-container">
+    
+      <input type="text" id="nome" placeholder="Nome:">
+      <input type="text" id="chogw" placeholder="Qual casa de Hogwarts:">
+      <textarea id="bio" placeholder="Escreva sua bio:"></textarea>
+      <h4>data de nacimento:</h4>
+      <input type="date" id="date">
+    
+      <button onclick="salvar()" id="btn">Salvar Perfil</button>
+    </div>
+     
+  </main>
+  <footer>
+    <div class="footer">
+      <p>Feito por: <a href="https://httpsvitormartins.github.io/myport/">Vitor Martins</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

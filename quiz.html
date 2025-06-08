@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="icon" href="img/LOGO.png.png" type="image/png">
+  <title>Quiz</title>
+</head>
+
+<body>
+
+  <header>
+    <nav id="navbar">
+      <div class="logo-container">
+        <img id="img_logo" src="/img/LOGO.png.png" alt="harry-potter" />
+      </div>
+      <ul id="nav_list">
+        <li class="nav-item active">
+          <a href="index.html">INÍCIO</a>
+        </li>
+        <li class="nav-item">
+          <a href="filmes.html">FILMES</a> 
+        </li>
+        <li class="nav-item">
+          <a href="favoritos.html">MEUS FAVORITOS</a>
+        </li>
+        <li class="nav-item">
+          <a href="quiz.html">QUIZ</a>
+        </li>
+      </ul>
+      <button id="mobile_btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+  <div class="feitiço"> 
+ <img src="/img/exp-quiz.jpg" class="feitiço-img feitiço1" alt="Expelliarmus">
+  <img src="/img/leviosa-quiz.jpg" class="feitiço-img feitiço2" alt="Lumos">
+  <img src="/img/lumos-quiz.jpg" class="feitiço-img feitiço3" alt="Alohomora">
+  <img src="/img/patronum-quiz.jpg" class="feitiço-img feitiço4" alt="Expecto Patronum">
+  
+  </div>
+  <div class="centro">
+    <div class="img_com_texto">
+      <img id="img_chapeu" src="img/logo.quiz.jpg"img_chapeu">
+      <button class="botao_quiz">Começar quiz!</button>
+      <h2 class="h2">Sombreto Seletor está te esperando..
+        <br>
+        Pronto para descobrir sua vertdadeira casa?
+      </h2>
+    </div>
+  </div>
+  <div class="container hide">
+    <!-- PERGUNTA 1 -->
+    <div class="questions-container hide">
+      <span class="question">Você entra em uma sala secreta. O que você faz primeiro?</span>
+      <div class="resp-container">
+        <button class="resp-button" data-casa="corvinal">Investiga tudo com calma</button>
+        <button class="resp-button" data-casa="sonserina">Procura pistas de magia antiga</button>
+        <button class="resp-button" data-casa="grifinoria">Vai direto ao que parece mais valioso</button>
+        <button class="resp-button" data-casa="lufaLufa">Chama os amigos para explorar juntos</button>
+      </div>
+      <div class="nav-buttons">
+        <button id="ant-question">Voltar</button>
+        <button id="prox-question">Próxima pergunta</button>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 2 -->
+    <div class="questions-container hide">
+      <span class="question">Qual dessas qualidades você mais valoriza?</span>
+      <div class="resp-container">
+        <button class="resp-button" data-casa="grifinoria">Coragem</button>
+        <button class="resp-button" data-casa="sonserina">Ambição</button>
+        <button class="resp-button" data-casa="corvinal">Sabedoria</button>
+        <button class="resp-button" data-casa="lufaLufa">Lealdade</button>
+      </div>
+      <div class="nav-buttons">
+        <button id="ant-question">Voltar</button>
+        <button id="prox-question">Próxima pergunta</button>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 3 -->
+    <div class="questions-container hide">
+      <span class="question">O que você faria se visse alguém colando na prova?</span>
+      <div class="resp-container">
+        <button class="resp-button" data-casa="grifinoria">Chamaria o professor</button>
+        <button class="resp-button" data-casa="sonserina">Ignoraria, não é problema seu</button>
+        <button class="resp-button" data-casa="corvinal">Pensaria na ética da situação</button>
+        <button class="resp-button" data-casa="lufaLufa">Tentaria conversar com a pessoa depois</button>
+      </div>
+      <div class="nav-buttons">
+        <button id="ant-question">Voltar</button>
+        <button id="prox-question">Próxima pergunta</button>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 4 -->
+    <div class="questions-container hide">
+      <span class="question">Qual animal mágico você escolheria como companheiro?</span>
+      <div class="resp-container">
+        <button class="resp-button" data-casa="grifinoria">Hipogrifo</button>
+        <button class="resp-button" data-casa="sonserina">Basilisco</button>
+        <button class="resp-button" data-casa="corvinal">Coruja</button>
+        <button class="resp-button" data-casa="lufaLufa">Pelúcio</button>
+      </div>
+      <div class="nav-buttons">
+        <button id="ant-question">Voltar</button>
+        <button id="prox-question">Próxima pergunta</button>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 5 -->
+    <div class="questions-container hide">
+      <span class="question">Como você prefere trabalhar?</span>
+      <div class="resp-container">
+        <button class="resp-button" data-casa="grifinoria">Liderando o grupo</button>
+        <button class="resp-button" data-casa="sonserina">Sozinho, sem depender de ninguém</button>
+        <button class="resp-button" data-casa="corvinal">Analisando tudo antes de agir</button>
+        <button class="resp-button" data-casa="lufaLufa">Trabalhando em equipe</button>
+      </div>
+      <div class="nav-buttons">
+        <button id="ant-question">Voltar</button>
+        <button id="prox-question">Próxima pergunta</button>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 6 -->
+    <div class="questions-container hide">
+      <span class="question">Em um duelo, qual estratégia você usaria?</span>
+      <div class="resp-container">
+        <button class="resp-button" data-casa="grifinoria">Atacar primeiro com tudo</button>
+        <button class="resp-button" data-casa="sonserina">Usar feitiços proibidos se necessário</button>
+        <button class="resp-button" data-casa="corvinal">Pensar e contra-atacar com precisão</button>
+        <button class="resp-button" data-casa="lufaLufa">Evitar o confronto e buscar paz</button>
+      </div>
+      <div class="nav-buttons">
+        <button id="ant-question">Voltar</button>
+        <button id="prox-question">Próxima pergunta</button>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 7 -->
+    <div class="questions-container hide">
+      <span class="question">O que você mais teme?</span>
+      <div class="resp-container">
+        <button class="resp-button" data-casa="grifinoria">Fracassar diante dos outros</button>
+        <button class="resp-button" data-casa="sonserina">Ser controlado por alguém</button>
+        <button class="resp-button" data-casa="corvinal">Não ser compreendido</button>
+        <button class="resp-button" data-casa="lufaLufa">Perder alguém querido</button>
+      </div>
+      <div class="nav-buttons">
+        <button id="ant-question">Voltar</button>
+        <button id="prox-question">Próxima pergunta</button>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 8 -->
+    <div class="questions-container hide">
+      <span class="question">Qual dessas matérias de Hogwarts mais te atrai?</span>
+      <div class="resp-container">
+        <button class="resp-button" data-casa="grifinoria">Defesa Contra as Artes das Trevas</button>
+        <button class="resp-button" data-casa="sonserina">Poções</button>
+        <button class="resp-button" data-casa="corvinal">Feitiços</button>
+        <button class="resp-button" data-casa="lufaLufa">Trato das Criaturas Mágicas</button>
+      </div>
+      <div class="nav-buttons">
+        <button id="ant-question">Voltar</button>
+        <button id="prox-question">Próxima pergunta</button>
+      </div>
+    </div>
+
+    <!-- RESULTADO -->
+    <div id="resultado-final" class="hide">
+      <h2>Sua casa é: <span id="casa-result"></span>!</h2>
+      <img id="imagem-casa" src="" alt="Imagem da casa" />
+      <p id="frase-casa" class="frase-casa"></p>
+      <p id="casa-result"></p> 
+
+    </div>
+    
+  </div>
+
+  <script src="/js/script.Quiz.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+
+</html>

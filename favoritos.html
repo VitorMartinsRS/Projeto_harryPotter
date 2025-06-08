@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/favoritos.css">
+    <link rel="icon" href="img/LOGO.png.png" type="image/png">
+    <title>Favoritos</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo-container">
+                <img id="img_logo" src="/img/LOGO.png.png" alt="harry-potter"/>
+            </div>
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="index.html">INÍCIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="filmes.html">FILMES</a> <!-- LINK NOVO AQUI -->
+                </li>
+                <li class="nav-item">
+                    <a href="favoritos.html">MEUS FAVORITOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz.html">QUIZ</a>
+                </li>
+            </ul>
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="filmes.html">Filmes</a> <!-- TAMBÉM AQUI -->
+                </li>
+                <li class="nav-item">
+                    <a href="favoritos.html">Favoritos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz.html">Quiz</a>
+                </li>
+            </ul> 
+        </div>
+    </header>
+ 
+    <div class="card-container"></div>
+        
+    <script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.card-container');
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    if (favoritos.length === 0) {
+      container.innerHTML = '<p id="p">Você não tem nenhum filme favorito</p>'
+      return;
+    }
+
+    const cards = favoritos.map(filme => {
+      return `
+        <div class="card">
+          <img src="${filme.poster}" alt="${filme.titulo}">
+          <h2>${filme.serial} - ${filme.title}</h2>
+        </div>
+      `;
+    }).join('');
+
+    container.innerHTML = cards;
+  });
+  
+    </script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
