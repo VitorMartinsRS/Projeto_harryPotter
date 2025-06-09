@@ -55,7 +55,7 @@ body {
 
 .botao_quiz {
   position: absolute;
-  bottom: 150px; /* distância do rodapé da imagem */
+  bottom: 180px; /* distância do rodapé da imagem */
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;

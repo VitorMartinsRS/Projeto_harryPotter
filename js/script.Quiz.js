@@ -74,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Reseta a resposta selecionada
       respostaSelecionada = null;
 
-      // Verifica se há mais perguntas
+      
       if (perguntaAtual < perguntas.length) {
         perguntas[perguntaAtual].classList.remove("hide");
       } else {
-        mostrarResultado(); // Chama a função para exibir o resultado
+        mostrarResultado(); 
       }
     });
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Função para mostrar o resultado final
+  
   function mostrarResultado() {
     const resultado = Object.keys(pontuacoes).reduce((a, b) =>
       pontuacoes[a] > pontuacoes[b] ? a : b
@@ -127,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
       fraseCasa.textContent = frasesCasas[resultado] || "";
     }
 
-    // 🎉 Efeito de confete
     if (typeof confetti === "function") {
       confetti({
         particleCount: 150,
