@@ -17,13 +17,11 @@ body {
   min-height: 130vh;
 
 }
-
-/* Estilo da div que centraliza a imagem */
 .centro {
   display: flex;
   justify-content: center;
   align-items: normal;
-  height: 100vh; /* ocupa a tela toda */
+  height: 100vh; 
   
 }
 .img_com_texto{
