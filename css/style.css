@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(rgba(99, 22, 6, 0.212), rgba(100, 53, 39, 0.5)), url('/img/background/estacaonovemeio.jpg');
+  background: linear-gradient(rgba(99, 22, 6, 0.212), rgba(100, 53, 39, 0.5)), url('../img/background/estacaonovemeio.jpg');
   background-size: cover;
   background-position: center;
   font-family: 'Bigelow Rules', serif;
