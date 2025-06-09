@@ -19,7 +19,15 @@ body {
   
   
 }
-d {
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.card {
   background-color: rgba(0, 0, 0, 0.747);
   width: 230px;
   height: 360px;
