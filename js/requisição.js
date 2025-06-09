@@ -38,7 +38,7 @@ function salvar(filmeData){
       estrela.classList.add('favorito')
       estrela.style.color = 'yellow'
       let filme = { ...filmeData[index], titulo:titulo }
-      favoritos.push(filme) 
+      favoritos.push(filme[index]) 
     }
     localStorage.setItem('favoritos', JSON.stringify(favoritos))
     
