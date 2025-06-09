@@ -15,8 +15,6 @@ body {
   background-repeat: no-repeat;
   min-height: 120vh;
   color: white;
-  display: flex;
-  flex-direction: column;
   
 }
 
