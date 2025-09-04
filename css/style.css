@@ -5,13 +5,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+    color: #b1a526;
+    text-decoration: none;
+    transition: 0.3s;
+    }
 
 body {
-  background: linear-gradient(rgba(99, 22, 6, 0.212), rgba(100, 53, 39, 0.5)), url('../img/background/estacaonovemeio.jpg');
+  background: linear-gradient(rgba(99, 22, 6, 0.212), rgba(100, 53, 39, 0.5)), url('../img/plaanodefundo/estacaonovemeio.jpg');
   background-size: cover;
   background-position: center;
   font-family: 'Bigelow Rules', serif;
 }
+a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
 
 /* Formulário de registro */
 .container {
@@ -72,6 +81,21 @@ h2 {
 .conta:hover {
   text-decoration: underline;
   opacity: 0.8;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right:10%;
+
+    text-align: center;
+    font-family: Poiret One, system-ui;
+    font-weight: normal;
+    font-size: 18px;
+    color: #fff;
 }
 
 @media (max-width: 768px){
