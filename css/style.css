@@ -5,46 +5,178 @@
   padding: 0;
   box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Henny+Penny&family=Poiret+One&display=swap');
+
+header {
+  width: 100%;
+  padding: 28px 8%;
+  background-color: rgba(99, 21, 6, 0.51);
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#img_logo {
+  width: 160px;
+  top: 30px;
+  position: relative;
+  left: 20px;
+  margin-top: -90px;
+} 
+
 a {
-    color: #b1a526;
+  color: #e0c068;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+.header-quote {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.house {
+    font-family: 'Henny Penny', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn-default{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4af37;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0,0, 0,0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+    font-family: 'Henny Penny';
+    width: 100px;
+    font-size: 16px;
+  }
+  .btn-default a {
     text-decoration: none;
-    transition: 0.3s;
+    color: #fff;
+  }
+  .btn-default:hover{
+    background-color: #F5F1D8;
+    color:#e0c068;
+    a {
+      color: #e0c068;
     }
 
+  }
+
 body {
-  background: linear-gradient(rgba(99, 22, 6, 0.212), rgba(100, 53, 39, 0.5)), url('../img/plaanodefundo/estacaonovemeio.jpg');
+  background: url('../img/background/estacaonovemeio.jpg') ;
   background-size: cover;
   background-position: center;
   font-family: 'Bigelow Rules', serif;
 }
-a:hover {
-    opacity: 0.7;
-    text-decoration: underline;
-  }
 
-/* Formulário de registro */
+/* ---------- TOPO E NAVEGAÇÃO ---------- */
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.logo1 {
+  width: 185px;
+  position: fixed;
+  left: -5px;
+  margin-left: 5%;
+  margin-top: 18px;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Bigelow Rules", serif;
+  backdrop-filter: blur(5px);
+  height: 20vh;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  font-size: 36px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* ---------- FORMULÁRIO ---------- */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  margin-top: 15vh;
+  height: auto;
+  flex-direction: column;
 }
 
 form {
-  width: 550px;
-  padding: 20px;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+    width: 450px;
+    padding: 30px;
+    border: 2px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-color: #d4af37;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
 }
 
-form input {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 18px;
+input {
+   align-items: center;
+  text-align: left;
+
+    width: 85%;
+    margin: 10px 0;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border-color: #d4af37;
+    font-family: "Bigelow Rules", serif;
+    font-size: 25px;
 }
 
 h2 {
@@ -54,21 +186,40 @@ h2 {
   color: #fff;
 }
 
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 10% 10px 10%;
+  text-align: center;
+  font-family: 'Poiret One', system-ui;
+  font-weight: normal;
+  font-size: 18px;
+  color: #fff;
+}
+
 .botao {
   width: 100%;
   height: 35px;
-  background-color: #b1a526;
+  background-color: #d4af37;
   color: #fff;
   font-family: 'Henny Penny';
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 16px;
   margin-top: 15px;
+  transition: background-color 0.3s ease;
 }
 
+.botao:hover{
+    background-color: #fff;
+    color:#e0c068;
+
+  }
+
 .conta {
-  color: #b1a526;
+  color: #d4af37;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -79,28 +230,50 @@ h2 {
 }
 
 .conta:hover {
-  text-decoration: underline;
+  text-decoration: none;
   opacity: 0.8;
 }
-h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    margin-left: 10%;
-    margin-right:10%;
 
-    text-align: center;
-    font-family: Poiret One, system-ui;
-    font-weight: normal;
-    font-size: 18px;
-    color: #fff;
+/* ---------- CARDS ---------- */
+.card {
+  width: 400px;
+  max-width: 90vw;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(58, 12, 3, 0.85);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  color: #fff;
+  font-family: 'Poiret One', sans-serif;
+  transition: box-shadow 0.3s;
 }
 
-@media (max-width: 768px){
-  form {
-    max-width: 350px;
-    max-height: 500px;
-  }
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
+
+/* ---------- RODAPÉ ---------- */
+.fundo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family:"Bigelow Rules", serif;
+  backdrop-filter: blur(5px);
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+#span {
+  color:#e0c068;
+  font-family: 'Henny Penny';
+  font-size: 22px;
+}
+
+#senhaid {
+  color: #e0c068;
+  font-family: 'Henny Penny';
+  font-size: 22px;
+}
+
+
