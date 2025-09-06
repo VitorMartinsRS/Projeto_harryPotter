@@ -11,6 +11,9 @@ header {
   width: 100%;
   padding: 28px 8%;
   background-color: rgba(99, 21, 6, 0.51);
+   position: sticky;
+    top: 0;
+    z-index: 3;
 }
 
 #navbar {
@@ -19,7 +22,8 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 35px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .logo-container {
@@ -29,8 +33,8 @@ header {
 }
 
 #img_logo {
-  width: 160px;
-  top: 30px;
+  width: 140px;
+  top: 40px;
   position: relative;
   left: 20px;
   margin-top: -90px;
@@ -276,4 +280,147 @@ h3 {
   font-size: 22px;
 }
 
+footer {
+  background-color: #631506; /* cor sólida, sem transparência */
+  padding: 18px 8%;
+  color: #fff;
+  font-family: 'Poiret One', sans-serif;
+}
+
+#footer_itens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* garante responsividade */
+  gap: 20px;
+}
+
+#copyright {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e0c068; /* segue a paleta dourada */
+}
+
+/* Social media */
+.social-media-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-media-buttons a {
+  color: #e0c068;
+  font-size: 22px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media-buttons a:hover {
+  transform: scale(1.2);
+  color: #fff; /* destaque no hover */
+}
+
+/* Responsivo */
+/* Responsivo para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 20px 6%;
+  }
+
+  #navbar {
+    gap: 15px;
+  }
+
+  #img_logo {
+    width: 130px;
+    margin-top: -40px; /* ajusta posicionamento do logo */
+  }
+
+  .nav-list {
+    gap: 30px;
+    font-size: 28px; /* diminui tamanho da fonte do menu */
+  }
+
+  form {
+    width: 380px;
+    padding: 25px;
+  }
+
+  input {
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  footer {
+    padding: 18px 6%;
+  }
+
+  #footer_itens {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+
+  .social-media-buttons a {
+    font-size: 15px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 8px 4%;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between; /* distribui logo e botão */
+    align-items: center;
+    padding: 0 20px; /* MESMO espaço à esquerda e à direita */
+  }
+
+  .logo-container {
+    margin: 0; /* remove margem extra */
+    flex: 0 0 auto;
+  }
+
+  #img_logo {
+    position: static; /* remove deslocamentos */
+    margin: 0;
+    width: 120px; /* ajusta para caber no mobile */
+    height: auto;
+  }
+
+  .btn-default {
+    margin: 0;
+    flex: 0 0 auto;
+  }
+  footer {
+    padding: 15px 0; /* menos espaçamento nas laterais */
+  }
+
+  #footer_itens {
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;   /* largura menor */
+    margin: 0 auto;   /* centraliza */
+    gap: 12px;
+  }
+
+  .social-media-buttons {
+    justify-content: center;
+  }
+}
 
