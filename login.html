@@ -1,60 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fazer Login ⚯ ͛ </title>
-    <link href= "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/login.css">   
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="shortcut icon" href="imagem/trenzinho.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazer Login ⚯ ͛ </title>
+
+  <!-- Ícones -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/login.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/LOGO.png.png" type="image/png">
+  <link rel="shortcut icon" href="imagem/trenzinho.png" type="image/x-icon">
 </head>
 
 <body>
+  <!-- HEADER -->
   <header>
-    <header>
-      <nav  class="topo2">
-        <div class="logo-container">
-          <img id="img_logo" src="img/LOGO.png.png" alt="harry-potter"/>
-      </div>
-    </nav>
-  </header>
-  
+        <nav id="navbar">
+            <div class="logo-container">
+                <img id="img_logo" src="img/LOGO.png.png" alt="harry-potter"/>
+            </div>
+            
+           
+           
+       <button class="btn-default"><a href="index.html">Cadastrar</a></button>
+    
+            
+        </nav>
+    </header>
 
-   <main class="container">
+  <!-- CONTEÚDO -->
+  <main class="container">
     <form id="loginForm">
-      <h1>Login</h1>
+      <h1><br>Login</h1>
       <p>As portas do Salão Comunal estão abertas para você! <br> Entre com sua conta e descubra a magia:</p>
-    <div class="input-container1"> 
-      <input type="email" id="Email" placeholder="Email" required/>
-       <i class="bx bxs-user"></i>
-    </div>
-    
-    <div class="input-container1"> 
-        <input type="password" id="Senha" placeholder="Senha" required/>
-        <i class="bx bxs-lock-alt" ></i>
-    </div>
 
-    <div class="remember-me">
-    <label>
-      <input type="checkbox">
-       Lembrar minha senha
-    </label>
-    </div>
-
-    <button type="submit" class="botao">Login</button>
-
-    <div class="register-link"> 
-      &nbsp;<a>Não tem uma conta?</a> <a href="index.html" class="link">Cadastre-se</a>
-      <h2>❾¾</h2>
-    
-    </div>
-      </form>
-     
-      </main>
-       <div class="aces">
-        <a href="acesso.html">ACESSO RESTRITO</a>
+      <div class="input-container1"> 
+        <input type="email" id="Email" placeholder="Email" required/>
+        <i class="bx bxs-user"></i>
       </div>
-<script src="js/script.LG.js"></script>
+      
+      <div class="input-container1"> 
+        <input type="password" id="Senha" placeholder="Senha" required/>
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+
+      <div class="remember-me">
+        <label>
+          <input type="checkbox"> Lembrar minha senha
+        </label>
+      </div>
+
+      <button type="submit" class="botao"><p class="botao_lg">Login</p></button>
+
+      <div class="register-link"> 
+        <a>Não tem uma conta?</a> 
+        <a href="index.html" class="link">Cadastre-se</a>
+        <h2>❾¾</h2>
+      </div>
+    </form>
+  </main>
+
+  <div class="aces">
+    <a href="acesso.html">ACESSO RESTRITO</a>
+  </div>
+    
+  <footer>
+  <div id="footer_itens">
+    <div class="footer-logo">
+      <img src="img/LOGO.png.png" alt="Logo Hogwarts" style="width:120px;">
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+      <a href="#">Termos</a>
+      <a href="#">Privacidade</a>
+    </div>
+
+    <div class="social-media-buttons">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+    </div>
+  </div>
+
+  <div id="copyright">
+    &copy; 2025 Hogwarts. Todos os direitos reservados.
+  </div>
+</footer>
+
+
+  <script src="js/script.LG.js"></script>
 </body>
+
 </html>

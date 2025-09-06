@@ -1,57 +1,248 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Henny+Penny&family=Poiret+One&display=swap');
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  flex-direction: column;
-  }
+}
 
-  header{
-    position: fixed;
-    z-index: 1000; /* que ele fique em cima de tudo */
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start; 
-    justify-content: space-around;
-    align-items: center;
-  }
+/* HEADER */
+header {
+  width: 100%;
+  padding: 28px 8%;
+  background-color: rgb(10, 21, 42);
+   position: sticky;
+    top: 0;
+    z-index: 3;
+}
 
-.topo2{
-    width: 100%;
-    height: 130px;
-    background-color: rgba(10, 21, 42, 0.307);
-    backdrop-filter: blur(95px);
-    position: fixed; 
-    top: -5px;
-    left: -5px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: "Bigelow Rules", "serif";
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #img_logo {
-  width: 160px;
-  top: 50px;
+  width: 140px;
+  top: 40px;
   position: relative;
-  right: 480px;
+  left: 20px;
   margin-top: -90px;
-  padding: 5px;
 } 
 
-h1{
-  margin-top: 35px;
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+.header-quote {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.house {
+    font-family: 'Henny Penny', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn-default{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#fff;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0,0, 0,0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+    font-family: 'Henny Penny';
+    width: 100px;
+    font-size: 16px;
+  }
+  .btn-default a {
+    text-decoration: none;
+    color:  #26356bca;
+;
+  }
+  .btn-default:hover{
+    background-color: rgba(10, 21, 42, 0.6);
+    a {
+      color: #fff;
+    }
+
+  }
+
+/* CONTEÚDO PRINCIPAL */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: url('../img/background/hogwarts2.jpg') no-repeat center center/cover;
+}
+main.container {
+  flex: 1; /* faz o conteúdo principal ocupar o espaço disponível */
+}
+
+.container {
+  margin: 135px auto 35px auto; /* top, horizontal, bottom */
+  width: 500px;
+  background-color: rgba(10, 21, 42, 0.307);
+  border: 2px solid rgba(255, 255, 255, 0.953);
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: rgba(7, 29, 78, 0.507) 0px 7px 29px 0px;
+  backdrop-filter: blur(95px);
+}
+
+
+h1 {
   font-family: "Henny Penny", system-ui;
   text-align: center;
-  }
+  margin-bottom: 10px;
+}
 
-p{
-  font-family: "Poiret One", system-ui;
+p {
+  font-family: "Bigelow Rules", serif;
   text-align: center;
-  color: #fff;
-  font-size: 18px;
-  margin-top: 10px;
-  }
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+/* ---------- INPUTS ---------- */
+.input-container1 {
+  position: relative;
+  width: 100%;
+  margin: 15px 0;
+}
 
+.input-container1 input {
+position: relative; 
+border-radius: 40px;
+ width: 85%; 
+ margin: 20px; 
+ padding-left: 40px; 
+ font-size: 15px 
+ box-sizing border-box; 
+ outline: none; 
+ font-size: 35px;
+ padding: 10px 10px 10px 40px; 
+ font-family: "Bigelow Rules", serif;
+}
+
+.input-container1 input::placeholder {
+color:#2f2d77c8; 
+font-family: "Bigelow Rules", serif; 
+font-size: 25px;
+}
+
+.input-container1 input:focus {
+  border-color: #d4af37;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.input-container1 i {
+  color: #fff;
+}
+
+/* ---------- LEMBRAR SENHA ---------- */
+.remember-me {
+  font-family: Poiret One, system-ui; 
+  font-size: 18px; 
+  display: flex; 
+  margin: 20px; 
+  justify-content: space-between;
+}
+.remember-me label input { 
+  accent-color: #fff 
+}
+.remember-me a { 
+  text-decoration: none; 
+  color: #fff; 
+} 
+.remember-me a:hover { 
+  text-decoration: underline; 
+}
+
+/* ---------- BOTÃO LOGIN ---------- */
+.botao {
+  width: 200px; /* menor largura */
+  height: 40px; /* ajuste de altura, opcional */
+  background-color: #fff; 
+  font-family: 'Henny Penny', cursive;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 15px auto; /* centraliza horizontalmente */
+  display: block; /* necessário para o margin auto funcionar */
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background: rgba(10, 21, 42, 0.6);
+  color: #fff;
+}
+
+.botao_lg {
+  font-family: 'Henny Penny', cursive; 
+  font-size: 20px; 
+  font-weight: 600;
+  color: #26356bca; 
+}
+
+.botao_lg:hover {
+  color: #fff;
+}
+
+/* ---------- LINKS ---------- */
+.register-link {
+  font-family: 'Poiret One', sans-serif; 
+  font-size: 17px; 
+  text-align: center; 
+  margin: 20px 0 15px;
+}
+
+
+.register-link .link {
+  font-family: 'Poiret One', sans-serif; 
+  text-decoration: none; 
+  color: #26356bca; 
+  font-weight: 600;
+}
+
+.register-link .link:hover {
+  text-decoration: none;
+}
 h2{
   text-align: center;
   font-family: "Henny Penny", system-ui;
@@ -60,166 +251,173 @@ h2{
 
 }  
 
-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: url('../img/background/hogwarts2.jpg');
-        background-size: cover;
-        background-position: center;
-      }
-
-main{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
+/* ---------- ACESSO RESTRITO ---------- */
+.aces {
+  margin: 20px 0;
+  text-align: center;
 }
 
-form {
-        width: 500px;        
-        padding: 20px;
-     }
-
-.container {
-  margin-top: 135px;
-  margin-bottom: 35px;
-        width: 500px;
-        background-color:rgba(10, 21, 42, 0.307);
-        border: 2px solid rgba(255, 255, 255, 0.953);
-        border-radius: 10px;
-        color: #fff;
-        box-shadow: rgba(7, 29, 78, 0.507)0px 7px 29px 0px;
-        backdrop-filter: blur(95px);
-      }
-
-.input-container1 input {
-    position: relative;
-    border-radius: 40px;
-    width: 85%;
-    margin: 20px;
-    padding-left: 40px;
-    font-size: 15px
-    box-sizing border-box;
-    outline: none;
-    font-size: 20px;
-    padding: 10px 10px 10px 40px;
+.aces a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "Poiret One", sans-serif;
+  transition: 0.3s;
 }
 
-.input-container1 input::placeholder {
-    color:#2f2d77c8;
-    font-family: "Bigelow Rules", serif;
-    font-size: 25px;
+.aces a:hover {
+  color:rgba(10, 21, 42, 0.6); ;
+}
+footer {
+   width: 100%;
+  background-color: rgb(10, 21, 42);
+  padding: 18px 8%;
+  color: #fff;
+  font-family: 'Poiret One', sans-serif;
+  text-align: center;
 }
 
-  .input-container1 input::placeholder {
-    color:#2f2d77d5;
-    font-family: "Bigelow Rules", serif;
-    font-size: 25px;
+
+#footer_itens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #e0c068;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.social-media-buttons a {
+  color: #e0c068;
+  font-size: 22px;
+  margin: 0 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media-buttons a:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+#copyright {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e0c068;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 20px 6%;
   }
 
-  .input-container1 i {
-    color: #fff;
+  #navbar {
+    gap: 15px;
   }
 
-.remember-me {
-      font-family: Poiret One, system-ui;
-      font-size: 18px;
-        display: flex;
-        margin: 20px;
-        justify-content: space-between;
-      }
-      
-      .remember-me label input {
-        accent-color: #fff
-      }
-      .remember-me a {
-        text-decoration: none;
-        color: #fff;
-      }
-      .remember-me a:hover {
-        text-decoration: underline;
-      }
+  #img_logo {
+    width: 130px;
+    margin-top: -40px; /* ajusta posicionamento do logo */
+  }
 
-      .botao{
-        width: 95%;
-        height: 30px;
-        background-color: #e0e7fed6;
-        outline: none;
-        cursor: pointer;
-      font-family:"Henny Penny", system-ui;
-      font-size: 17px;
-      margin-top: 20px;
-       }
+  .nav-list {
+    gap: 30px;
+    font-size: 28px; /* diminui tamanho da fonte do menu */
+  }
 
-     .register-link{
-      font-family: henny penny, system-ui;
-      font-size: 17px;
-      text-align: center;
-      margin: 20px 0 15px;
-       }
+  form {
+    width: 380px;
+    padding: 25px;
+  }
 
-    .link {
-      font-family: "henny penny", system-ui;
-      text-decoration: none;
-      color: #26356bca;
-      font-weight: 600;
-    }
+  input {
+    font-size: 22px;
+    padding: 10px;
+  }
 
-    .link:hover {
-      text-decoration: underline;
-    }
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  footer {
+    padding: 18px 6%;
+  }
+
+  #footer_itens {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     
-    .titulo {
-      color: #fff;
-      text-decoration: none;
-      transition: 0.3s;
-      font-size: 24px;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-    }
-    
-    a:hover {
-      opacity: 0.7;
-    }
-    
-    .nav-list {
-      list-style: none;
-      display: flex;
-    }
-    
-    .nav-list li {
-      letter-spacing: 3px;
-      margin-left: 32px;
-    }
-    
-    .mobile-menu {
-      display: none;
-      cursor: pointer;
-    }
-    .aces a{
-      
-      text-decoration: none;
-      color: #fff;
-    }
-    .mobile-menu div {
-      width: 32px;
-      height: 2px;
-      background: #fff;
-      margin: 8px;
-      transition: 0.3s;
-    }
-@media (max-width: 768px){
-   .container{
-    max-width: 350px;
+  }
+
+  .social-media-buttons a {
+    font-size: 15px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 8px 4%;
+  }
+
+  #navbar {
     display: flex;
+    justify-content: space-between; /* distribui logo e botão */
+    align-items: center;
+    padding: 0 20px; /* MESMO espaço à esquerda e à direita */
   }
-  #loginForm{
-    max-width: 350px;
+
+  .logo-container {
+    margin: 0; /* remove margem extra */
+    flex: 0 0 auto;
   }
-  
-  .input-container1 i {
-    display: none;
+
+  #img_logo {
+    position: static; /* remove deslocamentos */
+    margin: 0;
+    width: 120px; /* ajusta para caber no mobile */
+    height: auto;
+  }
+
+  .btn-default {
+    margin: 0;
+    flex: 0 0 auto;
+  }
+  footer {
+    padding: 15px 0; /* menos espaçamento nas laterais */
+  }
+
+  #footer_itens {
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;   /* largura menor */
+    margin: 0 auto;   /* centraliza */
+    gap: 12px;
+  }
+
+  .social-media-buttons {
+    justify-content: center;
   }
 }
+
