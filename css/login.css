@@ -372,6 +372,38 @@ footer {
   .social-media-buttons a {
     font-size: 15px;
   }
+  .container {
+    width: 90%;
+    max-width: 380px;
+    margin: 100px auto 30px auto;
+    padding: 10px;
+  }
+
+  .input-container1 input {
+    font-size: 22px;
+    padding: 8px 8px 8px 8px; 
+  }
+
+  .input-container1 i {
+    display: none; 
+  }
+
+  p {
+    font-size: 28px;
+  }
+
+  .botao {
+    width: 150px;
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
 }
 
 
@@ -418,6 +450,42 @@ footer {
 
   .social-media-buttons {
     justify-content: center;
+  }
+  .container {
+    width: 95%;
+    max-width: 320px;
+    margin: 60px auto 20px auto;
+    padding: 8px;
+  }
+
+  .input-container1 input {
+    font-size: 18px;
+    padding: 8px 8px 8px 32px;
+    width: 90%;
+    margin: 12px 0;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .botao {
+    width: 120px;
+    font-size: 13px;
+    margin: 10px auto;
+  }
+
+  .register-link {
+    font-size: 15px;
+    margin: 15px 0 10px;
   }
 }
 
