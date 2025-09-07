@@ -327,8 +327,7 @@ footer {
   }
 
   #img_logo {
-    width: 130px;
-    margin-top: -40px; /* ajusta posicionamento do logo */
+    width: 110px;
   }
 
   .nav-list {
@@ -372,16 +371,22 @@ footer {
   .social-media-buttons a {
     font-size: 15px;
   }
+
+  /* Centraliza o container do loginForm */
   .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     max-width: 380px;
     margin: 100px auto 30px auto;
     padding: 10px;
   }
-
+ 
   .input-container1 input {
     font-size: 22px;
-    padding: 8px 8px 8px 8px; 
+    padding: 10px 10px 10px 32px;
   }
 
   .input-container1 i {
