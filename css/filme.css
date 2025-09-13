@@ -265,6 +265,7 @@ li{
     flex-direction: column;
     gap: 12px;
     margin: 12px 0px;
+    font-family: 'Henny Penny';
    }
    #mobile_nav_list .nav_iten{
     list-style: none;
