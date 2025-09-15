@@ -3,80 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/favoritos.css">
     <link rel="icon" href="img/LOGO.png.png" type="image/png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Favoritos</title>
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <div class="logo-container">
-                <img id="img_logo" src="img/LOGO.png.png" alt="harry-potter"/>
-            </div>
-            <ul id="nav_list">
-                <li class="nav-item active">
-                    <a href="index.html">INÍCIO</a>
-                </li>
-                <li class="nav-item">
-                    <a href="filmes.html">FILMES</a> <!-- LINK NOVO AQUI -->
-                </li>
-                <li class="nav-item">
-                    <a href="favoritos.html">MEUS FAVORITOS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="quiz.html">QUIZ</a>
-                </li>
-            </ul>
-            <button id="mobile_btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </nav>
+  <header>
+    <nav id="navbar">
+      <div class="logo-container">
+        <img id="img_logo" src="img/LOGO.png.png" alt="Logo Hogwarts">
+      </div>
+      <ul id="nav_list">
+        <li class="nav_iten"><a href="filmes.html">Filmes</a></li>
+        <li class="nav_iten active"><a href="favoritos.html">Meus Favoritos</a></li>
+        <li class="nav_iten"><a href="quiz.html">Quiz</a></li>
+      </ul>
 
-        <div id="mobile_menu">
-            <ul id="mobile_nav_list">
-                <li class="nav-item">
-                    <a href="index.html">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="filmes.html">Filmes</a> <!-- TAMBÉM AQUI -->
-                </li>
-                <li class="nav-item">
-                    <a href="favoritos.html">Favoritos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="quiz.html">Quiz</a>
-                </li>
-            </ul> 
-        </div>
-    </header>
- 
+      <!-- Botão de login -->
+      <a href="login.html" class="btn-default">Login</a>
+
+      <button id="mobile_btn" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <div id="mobile_menu">
+      <ul id="mobile_nav_list">
+        <li class="nav_iten "><a href="filmes.html">Filmes</a></li>
+        <li class="nav_iten "><a href="favoritos.html">Meus Favoritos</a></li>
+        <li class="nav_iten "><a href="quiz.html">Quiz</a></li>
+      </ul>
+      <a href="login.html" class="btn-default">Login</a>
+    </div>
+  </header>
+
+  <main>
     <div class="card-container"></div>
-        
-    <script>
-    
+  </main>
+
+  <footer>
+    <div id="footer_itens">
+      <div class="footer-logo">
+        <img src="img/LOGO.png.png" alt="Logo Hogwarts" style="width:120px;">
+      </div>
+      <div class="footer-links">
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a href="#">Termos</a>
+        <a href="#">Privacidade</a>
+      </div>
+      <div class="social-media-buttons">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+      </div>
+    </div>
+    <div id="copyright">
+      &copy; 2025 Hogwarts. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.card-container');
-    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+      const container = document.querySelector('.card-container');
+      const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
-    if (favoritos.length === 0) {
-      container.innerHTML = '<p id="p">Você não tem nenhum filme favorito</p>'
-      return;
-    }
+      if (!favoritos.length) {
+        container.innerHTML = '<p id="p">Você não tem nenhum filme favorito</p>';
+        return;
+      }
 
-    const cards = favoritos.map(filme => {
-      return `
+      container.innerHTML = favoritos.map(filme => `
         <div class="card">
           <img src="${filme.poster}" alt="${filme.titulo}">
           <h2>${filme.serial} - ${filme.title}</h2>
         </div>
-      `;
-    }).join('');
+      `).join('');
+    });
 
-    container.innerHTML = cards;
-  });
-  
-    </script>
-    <script src="js/script.js"></script>
+    // Script básico para abrir/fechar o menu mobile
+    document.getElementById('mobile_btn')
+      .addEventListener('click', () => {
+        document.getElementById('mobile_menu').classList.toggle('active');
+      });
+  </script>
 </body>
+    
 </html>
